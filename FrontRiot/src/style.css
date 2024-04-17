@@ -1,0 +1,12 @@
+* {
+  background-color: dimgray;
+  color: #fff ;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

@@ -1,0 +1,42 @@
+<login>
+  <form onsubmit={handleSubmit}>
+    <input type="text" name="name" placeholder="name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    import axios from 'axios';
+
+    export default {
+      handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+
+        const url = 'http://localhost:3000/user';
+
+        const headers = {
+          'Content-Type': 'application/json',
+        };
+
+        axios.post(url, data, {
+          headers: headers,
+          withCredentials: true,
+        })
+          .then(response => {
+            console.log('deu bom ')
+            console.log(response.data);
+          })
+          .catch(error => {
+             console.log('deu ruim ')
+            console.error('Error:', error);
+          });
+      }
+    }
+  </script>
+</login>

@@ -1,0 +1,27 @@
+<app>
+  <div> Bem-Vindo</div>
+  <div><a href="/login"><button>Login</button></a></div>
+  <div><a href="/cadastro"><button>cadastro</button></a></div>
+  
+
+  <router>
+    <route path="/login"><login /></route>
+      <route path="/Cadastro"><cadastro /></route>
+      <route path="/sidebar"><sidebar /></route>
+      
+
+  </router>
+
+  <script>
+  import { Router, Route } from '@riotjs/route'
+   import { register } from 'riot'
+
+    
+    export default {
+      components: { Router, Route }
+    }
+
+    register('router', Router);
+    register('route', Route);
+  </script>
+</app>

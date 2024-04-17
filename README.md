@@ -22,7 +22,8 @@ Clone o repositório.
 ✅ Instale as dependências
 npm install
 ✅ Execute o projeto
-npm run dev
+npm run dev - Backend
+npm start - Frontend
 ✅ Acesse o projeto
 http://0.0.0.0:3000/user
 📱 Endpoints
